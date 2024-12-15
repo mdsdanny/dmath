@@ -22,7 +22,6 @@ class DMath():
         """
         It calculates the n number of roots of a z complex number.
         It ilustrates the The Moivre theorem.
-
         """
         if type(n) != int:
             n = int(n)
