@@ -43,7 +43,6 @@ class DMath:
             zeta = (fi + 2 * k * self.pi()) / self.n
             self.roots.append(zeta)
             k += 1
-
         return tuple(self.roots)
 
     def format_roots(self, degrees=False):
@@ -53,12 +52,10 @@ class DMath:
         :return: a tuple of angles
         """
         if degrees:
-            d = []
-            for r in self.roots:
-                d.append(math.degrees(r))
-            return tuple(d)
+            t = tuple((math.degrees(r) for r in self.roots))
         else:
-            return tuple(self.roots)
+            t = tuple(self.roots)
+        return t
 
     def n(self):
         """
